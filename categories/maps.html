@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700|Nunito+Sans:300,400,700|Open+Sans:300,400,700|Roboto:100,300,400,700" rel="stylesheet"> 
+    <!-- CSS styles -->
+    
+    <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+    <title>Maps</title>
+<style>
+
+.my_map{
+    height: 75rem;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="map" class="my_map"></div>
+    <script>
+
+        function initMap() {
+            var map;
+            var marker;
+            var infowindow;
+            var contentString="Brighton is an affluent coastal suburb of Melbourne, Victoria, Australia, 11 km south-east of Melbourne's central business district.Its local government area is the City of Bayside. According to the Australian Bureau of Statistics, Brighton had a population of 23,253 people in 2016. Brighton is named after Brighton in England";
+            var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -37.8136, lng: 144.9631},
+          zoom: 12
+        });
+
+         marker = new google.maps.Marker({
+          position: {lat:-37.9160, lng:144.9861},
+          map: map,
+          icon:image,
+          title:'Brighton Beach'
+        });
+         infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+
+      }
+
+        
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5sjf4bnfJg28_cZtl2-uy5wasmWkt084&callback=initMap"
+async defer>
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,8 @@
+Title:Looking for Web developer
+
+Requirements
+To be seriously considered for this role, you must meet the following requirements:
+Experience:You must demonstrate a minimum of 3 + years of experience in a 
+similar role and sound understanding of software applications and code, in particular
+ experience with HTML, CSS, JavaScript (eg. JQuery, React, Node.js), PHP, JSON, MySQL
+ and AWS Cloud services
