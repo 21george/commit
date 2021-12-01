@@ -6,7 +6,7 @@ require_once('../../helpers/url_redirect.php');
 require_once('../../models/Customer.php');
 require_once('../../models/Transaction.php');
 //\Stripe\Stripe::setApiKey('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
-\Stripe\Stripe::setApiKey('sk_test_n4554U4qi7kZYIFuvM6B63mW');
+\Stripe\Stripe::setApiKey(''); // you have to put your owen key from PayPal  to Aviode miss founds(just have to create a Sandbox--account for pratcies uses (two key you need to crea)!)
 $POST = filter_var_array($_POST,FILTER_SANITIZE_STRING);
 $type="stripe";
 $first_name = $POST['first_name'];
